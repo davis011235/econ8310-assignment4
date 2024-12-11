@@ -91,7 +91,7 @@ with pm.Model() as model__7day:
 # Graphing posterior distributions for p_30_7 and p_40_7
 
 p_30_7_samples =  np.concatenate(trace_7day.posterior.p_30_7.data[:,1000:])
-p_40_7_samples =  np.concatenate(trace_1day.posterior.p_40_1.data[:,1000:])
+p_40_7_samples =  np.concatenate(trace_7day.posterior.p_40_7.data[:,1000:])
 
 plt.figure(figsize=(12.5, 4))
 plt.hist(p_30_7_samples, bins=40, label='Posterior p_30_7', density=True)
